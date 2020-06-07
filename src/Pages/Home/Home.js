@@ -9,7 +9,6 @@ class Home extends Component{
       <UserNavbar/>
       <Slideshow/>
       <h1 className= "about-us">About Us</h1>
-      
     </div>
     )
   }
