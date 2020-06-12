@@ -5,6 +5,7 @@ class LogIn extends Component{
   render(){
     return(
       <div>
+        <UserNavbar></UserNavbar>
         <div className = "log-in-container"> 
         <h1 className= "log-in-text">Log In</h1>
 

@@ -6,11 +6,7 @@ class Home extends Component{
   render(){
     return (
     <div>
-<<<<<<< HEAD
       <UserNavbar/>
-=======
-      {/* <UserNavbar/> */}
->>>>>>> Added Routing
       <Slideshow/>
       <h1 className= "about-us">About Us</h1>
     </div>
