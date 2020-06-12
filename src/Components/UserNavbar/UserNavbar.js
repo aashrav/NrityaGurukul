@@ -1,5 +1,7 @@
 import React from 'react';
 import './UserNavbar.css'
+
+import {Link} from "react-router-dom";
 // import {
 //   Collapse,
 //   Navbar,
@@ -25,19 +27,21 @@ const NavBar = (props) => {
       <img className = "usernb-logo" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
       <div className = "usernb-links">
         <button>
-          <h3>Home</h3>
+          <Link to = "/">
+            <h3>Home</h3>
+          </Link>
         </button>
         {/* <button>
           <h3>About Us</h3>
         </button> */}
         <button>
-          <h3>Contact</h3>
+          <Link to= "contact">Contact</Link>
         </button>
-        <button>
+        {/* <button>
           <h3>Gallery  </h3>
-        </button>
+        </button> */}
         <button>
-          <h3>Log In</h3>
+          <Link to = "login">Log In</Link>
         </button>
       </div>
     </div>
