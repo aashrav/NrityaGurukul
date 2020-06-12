@@ -6,7 +6,6 @@ class Home extends Component{
   render(){
     return (
     <div>
-      <UserNavbar/>
       <Slideshow/>
       <h1 className= "about-us">About Us</h1>
     </div>
