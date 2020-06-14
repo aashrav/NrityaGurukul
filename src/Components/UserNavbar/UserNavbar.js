@@ -24,7 +24,7 @@ const NavBar = (props) => {
 
   return (
     <div className = "user-navbar">
-      <img className = "usernb-logo" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
+      <img className = "usernb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
       <div className = "usernb-links">
         <button>
           <Link to = "/">

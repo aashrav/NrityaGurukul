@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UserNavbar from '../../Components/UserNavbar/UserNavbar';
 import Slideshow from '../../Components/Slideshow/Slideshow';
 import './Home.css'
 class Home extends Component{

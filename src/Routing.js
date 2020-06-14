@@ -4,7 +4,6 @@ import UserNavbarWrapper from './Components/UserNavbar/UserNavbarWrapper';
 
 import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
-import UserNavBar from './Components/UserNavbar/UserNavbar';
 
 
 const Routing = () => {
