@@ -36,7 +36,7 @@ class LogIn extends Component{
         <div className = "log-in-container"> 
         <h1 className= "log-in-text">Log In</h1>
 
-        <img className = "usernb-logo" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
+        <img className = "usernb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
           <input className = "log-in-username" onChange = {this.emailHandler}  type= "email" placeholder= "Email"></input>
           <input className = "log-in-password" onChange = {this.passwordHandler} type = "password" placeholder= "Password"></input>
           <button className = "log-in-button" onClick = {this.submitHandler}>Submit</button>
