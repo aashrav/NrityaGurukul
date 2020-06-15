@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import UserNavbarWrapper from './Components/UserNavbar/UserNavbarWrapper';
+import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 
 import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
 
 
-const Routing = () => {
+const Routing = ({appProps}) => {
   var routes = [
     {
       Component: LogIn,
@@ -33,7 +33,7 @@ const Routing = () => {
           key = {index}
           path = {ele.path}
           render = {(props) =>{
-            return <UserNavbarWrapper hi = {LogIn} component = {ele.Component} {...props}><Home></Home></UserNavbarWrapper>
+            return <NavbarWrapper hi = {LogIn} component = {ele.Component} {...appProps}><Home></Home></NavbarWrapper>
           }}       
        />
       })

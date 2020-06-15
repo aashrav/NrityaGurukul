@@ -21,11 +21,8 @@ class LogIn extends Component{
 
   submitHandler = () =>{
     getUser({email: this.state.email, password: this.state.password}).then((res) =>{
-      if(res === null){
-        console.log("wtf")
-      }
-      else{
-        console.log(res);
+      if(res === true){
+        this.props.setAuthenticated(1);
       }
     })
   }
