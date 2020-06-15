@@ -1,40 +1,36 @@
-.user-navbar{
-  background-color: #f3f3f3;
+.student-navbar{
+  background-color: rgb(56, 55, 55);
   min-height: max-content;
 }
 
-.usernb-logo{
+.studentnb-logo{
   height: 60px;
 }
 
-h3{
-  display:inline;
-  font-weight: lighter;
+.student-link{
   text-decoration: none;
+  color: #f3f3f3
 }
 
-Link{
-  text-decoration: none;
-}
-
-.usernb-links{
+.studentnb-links{
   float: right;
 }
 
-.user-navbar button{
+.student-navbar button{
   outline: transparent;
   background-color: transparent;
   border: transparent;
   margin: 15px;
 }
 
-.user-navbar button h3{
+.student-navbar button h3{
+  display:inline;
   font-weight: lighter;
   font-size: large;
   /* font-family:monospace */
 }
 
-.user-navbar button :hover{
+.student-navbar button :hover{
   cursor: pointer;
   color: #0d98ba;
   /* und */
