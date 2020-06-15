@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './LogIn.css';
 import {getUser} from '../../ApiFunctions/User';
+import { compareSync } from 'bcrypt';
 class LogIn extends Component{
   state = {
     email: "",
@@ -20,12 +21,12 @@ class LogIn extends Component{
   }
 
   submitHandler = () =>{
+    console.log("hi")
     getUser({email: this.state.email, password: this.state.password}).then((res) =>{
-      if(res === null){
-        console.log("wtf")
-      }
-      else{
-        console.log(res);
+      console.log(res)
+      if(res === true){
+        this.props.setAuthenticated(1);
+        console.log(this.props.authenticated)
       }
     })
   }
