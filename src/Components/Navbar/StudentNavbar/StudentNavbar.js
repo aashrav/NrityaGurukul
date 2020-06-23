@@ -16,7 +16,7 @@ const StudentNavbar = () =>{
             <h3>About Us</h3>
           </button> */}
           <button>
-            <Link className = "student-link" to= "contact">
+            <Link className = "student-link" to= "files">
               <h3>Files</h3>
             </Link>
           </button>
