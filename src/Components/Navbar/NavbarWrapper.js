@@ -14,6 +14,7 @@ const getNavBar = (accessLevel) =>{
 const NavbarWrapper = ({
   component: Component,
 ...appProps}) =>{
+  console.log("NavbarWrapper:",Component)
   return(
     <React.Fragment>
       {(getNavBar(appProps.authenticated))}

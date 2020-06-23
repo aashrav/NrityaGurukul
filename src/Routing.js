@@ -4,36 +4,35 @@ import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 
 import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
-
+import Files from './Pages/Files/Files';
 
 const Routing = ({appProps}) => {
   var routes = [
     {
       Component: LogIn,
       path: '/login',
-      redirect:'/'
     },
     {
       Component: Home,
       path: '/',
-      redirect:'/'
     },
-    // {
-    //   Component: UserNavBar,
-    //   path: '/',
-    //   redirect:'/'
-    // },
+    {
+      Component: Files,
+      path: '/files',
+    },
   ]
   return(
 
     <Router>
       <Switch>
-      {routes.map((ele,index) => {
+      {routes.map(({path, Component},index) => {
         return <Route
+        {...console.log("Routing:",Component)}
           key = {index}
-          path = {ele.path}
+          exact
+          path = {path}
           render = {(props) =>{
-            return <NavbarWrapper hi = {LogIn} component = {ele.Component} {...appProps}><Home></Home></NavbarWrapper>
+            return <NavbarWrapper component = {Component} {...props} {...appProps}></NavbarWrapper>
           }}       
        />
       })
