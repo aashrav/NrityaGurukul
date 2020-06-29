@@ -1,20 +1,22 @@
 import React from 'react';
 import UserNavbar from './UserNavbar/UserNavbar';
 import StudentNavbar from './StudentNavbar/StudentNavbar';
+import AdminNavbar from './AdminNavbar/AdminNavbar';
 
 const getNavBar = (accessLevel) =>{
   console.log("access level ", accessLevel)
-  if(accessLevel === 0){
-    return <UserNavbar/>;
-  }else{
+  if(accessLevel === 2){
+    return <AdminNavbar/>;
+  }else if(accessLevel === 1){
     return <StudentNavbar/>;
+  }else{
+    return <UserNavbar/>
   }
 }
 
 const NavbarWrapper = ({
   component: Component,
 ...appProps}) =>{
-  console.log("NavbarWrapper:",Component)
   return(
     <React.Fragment>
       {(getNavBar(appProps.authenticated))}

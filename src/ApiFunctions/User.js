@@ -2,16 +2,22 @@ import axios from 'axios';
 const api = axios.create({baseURL: 'http://localhost:5000'})
 
 export const getUser = (user) => {
-  return api
-        .get('users/login',{params:user})
-        .then(res =>{
-          localStorage.setItem('usertoken', res.data);
-          return res.data;
-        })
-        .catch(err =>{
-          console.log(err);
-        })
+    return api
+       .get('users/getUser', {params:user})
+       .then( (res) =>{
+        return res;
+      })
 }
+
+export const login = (user) =>{
+  return api
+    .get('users/login',{params:user})
+    .then(res =>{
+      return res
+    })
+}
+
+
 
 // export const getUser = (user) =>{
 //   return axios({

@@ -1,0 +1,9 @@
+.upload-title{
+  font-weight: lighter;
+  margin: 20px;
+}
+
+.upload-file{
+  margin: 20px;
+  width: max-content;
+}

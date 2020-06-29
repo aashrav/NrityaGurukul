@@ -5,6 +5,7 @@ import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
 import Files from './Pages/Files/Files';
+import Upload from './Pages/Upload/Upload';
 
 const Routing = ({appProps}) => {
   var routes = [
@@ -20,6 +21,10 @@ const Routing = ({appProps}) => {
       Component: Files,
       path: '/files',
     },
+    {
+      Component:Upload,
+      path: '/upload'
+    }
   ]
   return(
 
@@ -27,7 +32,6 @@ const Routing = ({appProps}) => {
       <Switch>
       {routes.map(({path, Component},index) => {
         return <Route
-        {...console.log("Routing:",Component)}
           key = {index}
           exact
           path = {path}
