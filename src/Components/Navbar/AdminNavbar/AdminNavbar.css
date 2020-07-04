@@ -1,0 +1,37 @@
+.admin-navbar{
+  background-color: rgb(182, 22, 22);
+  min-height: max-content;
+}
+
+.adminnb-logo{
+  height: 60px;
+}
+
+.admin-link{
+  text-decoration: none;
+  color: black
+}
+
+.adminnb-links{
+  float: right;
+}
+
+.admin-navbar button{
+  outline: transparent;
+  background-color: transparent;
+  border: transparent;
+  margin: 15px;
+}
+
+.admin-navbar button h3{
+  display:inline;
+  font-weight: lighter;
+  font-size: large;
+  /* font-family:monospace */
+}
+
+.admin-navbar button :hover{
+  cursor: pointer;
+  color: white;
+  /* und */
+}

@@ -1,0 +1,82 @@
+.upload-title{
+  font-weight: lighter;
+  margin: 20px;
+}
+
+.upload-file{
+  /* margin: 20px; */
+  width: 100%;
+}
+
+.upload-form{
+  position: relative;
+  align-self: center;;
+  /* width: fit-content; */
+  background-color: #0d98ba;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 7px;
+  width: 25%;
+  text-align: left;
+  color: #f3f3f3;
+}
+.upload-submit-wrapper{
+  text-align: center;
+}
+
+.upload-submit{
+  border-radius: 7px;
+  outline: transparent;
+  text-align: center;
+  background-color: rgb(230, 118, 118);
+  width: 25%;
+  display: inline-block;
+  height: 50px;
+  font-size: larger;
+  color:white
+}
+.upload-form h1{
+  text-align: center;
+}
+
+.upload-wrapper{
+  text-align: -webkit-center;
+}
+
+/* .upload-fileName{
+  /* display: inline-flex; */
+/* }  */
+
+
+.upload-fileName p{
+  padding: 5px; 
+  /* width: fit-content;  */
+  display: inline;
+  width: min-content;
+  font-size: larger;
+}
+
+.upload-fileName{
+  margin: 20px;
+  margin-left: 0px;
+}
+
+.upload-file{
+  font-size: medium;
+  margin: 10px;
+  margin-left: 0px;
+  outline: transparent;
+  width: fit-content;
+}
+
+.upload-form .upload-fileName input{
+  border-radius: 5px;
+  outline: transparent;
+  height: 30px;
+  width: 50%;
+  font-size: medium;
+}
+
+.upload-file, .upload-submit :hover{
+  cursor: pointer;
+}

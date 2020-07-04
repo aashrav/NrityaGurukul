@@ -21,6 +21,10 @@ const UserSchema = new Schema({
   group:{
     type: Number,
     required: true
+  },
+  accessLevel:{
+    type: Number,
+    required: true
   }
 })
 
