@@ -85,16 +85,15 @@ users.post('/createUser', (req, res) =>{
     })
 })
 
-users.get('/getS3URL', (req,res)=>{
+users.post('/getS3URL', (req,res)=>{
   const s3 = new AWS.S3({
     accessKeyId:process.env.AWS_ID,
     secretAccessKey: process.env.AWS_SECRET,
     region:'eu-west-1',
     signatureVersion: 'v4'
   });
-  console.log("BWOEIFJO" , req);
-  const fileName = "bruh.png"
-  const fileType = ".png";
+  const fileName = req.body.fileName;
+  // const fileType = ".mp4";
 
   const s3Params = {
     Bucket: S3_BUCKET,
@@ -104,22 +103,11 @@ users.get('/getS3URL', (req,res)=>{
     ACL: 'public-read',
 
   };
-  // res.send("bruh")
   s3.getSignedUrl('putObject', s3Params, (err, data) => {
     if(err){
       console.log(err);
       res.json({success: false, error: err})
     }
-    // const returnData = {
-    //   signedRequest: data,
-    //   url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
-    // };
-    // Send it all back
-    // var options = {
-    //   headers: {
-    //     'Content-Type': fileType
-    //   }
-    // };
     res.json({success:true, data:{data}});
 
   });
