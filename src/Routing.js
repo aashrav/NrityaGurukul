@@ -8,10 +8,12 @@ import Files from './Pages/Files/Files';
 import Upload from './Pages/Upload/Upload';
 
 const Routing = ({appProps}) => {
+
   var routes = [
     {
       Component: LogIn,
       path: '/login',
+      redirect: '/',
     },
     {
       Component: Home,

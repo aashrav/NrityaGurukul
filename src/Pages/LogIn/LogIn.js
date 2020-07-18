@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LogIn.css';
-import {getUser,login} from '../../ApiFunctions/User';
+import {login} from '../../ApiFunctions/User';
 class LogIn extends Component{
   state = {
     email: "",
@@ -23,31 +23,20 @@ class LogIn extends Component{
   submitHandler = () =>{
     login({email: this.state.email, password: this.state.password})
       .then((res)=>{
-        if(res.data === true){
+        if(res.data && res.data.isAuthenticated === true){
           this.invalidAuth(false)
-          getUser({email:this.state.email})
-            .then((res) => {
-              this.props.setAuthenticated(res.data.accessLevel);
-            })
+          this.props.setAuthenticated(res.data.accessLevel);
+          window.localStorage.setItem('jwtToken', res.data.token);
+          window.location.reload();
         }else{
-          console.log("hii")
           this.invalidAuth(true);
         }
       }).catch((err) => {
-        console.log(err)
+        this.invalidAuth(true);
       })
-    // getUser({email: this.state.email, password: this.state.password}).then((res)=>{
-      
-    // })
-      // console.log(user);
-      // if(res === true){
-      //   console.
-      //   this.props.setAuthenticated(res.data[0].accessLevel);
-      // }
   }
 
   invalidAuth = (val) =>{
-    // console.log(val)
     this.setState({
       invalid: val
     })
@@ -61,7 +50,7 @@ class LogIn extends Component{
           <img className = "usernb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
           <input className = "log-in-username" onChange = {this.emailHandler}  type= "email" placeholder= "Email"></input>
           <input className = "log-in-password" onChange = {this.passwordHandler} type = "password" placeholder= "Password"></input>
-          {(this.state.invalid) ? <h4>Invalid Email/Password*</h4>: <h1></h1>}
+          {(this.state.invalid) ? <h4>Invalid Email/Password*</h4>: ""}
           <button className = "log-in-button" onClick = {this.submitHandler}>Submit</button>
         </div>
       </div>    

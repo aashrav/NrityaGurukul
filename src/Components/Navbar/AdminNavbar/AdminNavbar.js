@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './AdminNavbar.css'
 
-const AdminNavbar = () =>{
+const AdminNavbar = (props) =>{
   return(
       <div className = "admin-navbar">
         <img className = "adminnb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
@@ -12,19 +12,13 @@ const AdminNavbar = () =>{
               <h3>Home</h3> 
             </Link>
           </button>
-          {/* <button>
-            <h3>About Us</h3>
-          </button> */}
           <button>
             <Link className = "admin-link" to= "upload">
               <h3>Upload</h3>
             </Link>
           </button>
-          {/* <button>
-            <h3>Gallery  </h3>
-          </button> */}
           <button>
-            <Link className = "admin-link" to = "login">
+            <Link className = "admin-link" onClick = {props.handleLogout}>
               <h3>Log Out</h3>
             </Link>
           </button>

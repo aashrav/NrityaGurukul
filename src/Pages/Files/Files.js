@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Slideshow from '../../Components/Slideshow/Slideshow';
 import './Files.css';
 
 class Files extends Component{
