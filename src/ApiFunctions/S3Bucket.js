@@ -4,7 +4,6 @@ const api = axios.create({baseURL: 'http://localhost:5000'})
 export const handleUpload = (props) =>{
   let file = props.file;
   let myFile = props.fileName.split(".");
-  // const fileName = myFile[0];
   const fileType = myFile[myFile.length -1] ; 
   console.log("Props fileName", props.fileName)
   console.log("Props file", props.file)
@@ -18,7 +17,6 @@ export const handleUpload = (props) =>{
     console.log("RESPONSE", response);
     var returnData = response.data.data;
     var signedRequest = returnData.data; 
-    var url = returnData.url;
     console.log("Recieved a signed request " + signedRequest);
     alert("bruh");
 
@@ -28,16 +26,10 @@ export const handleUpload = (props) =>{
     axios.put(signedRequest,file,options)
     .then(result => {
       console.log("Response from s3: ", result)
-      // this.setState({success: true});
     })
     .catch(error => {
       console.log("hi")
       alert("ERROR " + JSON.stringify(error));
     })
   })
-  // .catch(error => {
-  //   console.log("bye")
-  //   console.log(error)
-  //   // alert(JSON.stringify(error));
-  // })
 }

@@ -3,7 +3,7 @@ import './Slideshow.css';
 const Slideshow = () =>{
   return(
     <div className = "slideshow">
-      <img className= "groupImg" src = {process.env.PUBLIC_URL + '/images/groupImg.jpg'}></img> 
+      <img alt = "" className= "groupImg" src = {process.env.PUBLIC_URL + '/images/groupImg.jpg'}></img> 
     </div>
   )
 }

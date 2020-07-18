@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './StudentNavbar.css'
 
-const StudentNavbar = () =>{
+const StudentNavbar = (props) =>{
   return(
       <div className = "student-navbar">
         <img className = "studentnb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logoWhite.png'}></img>
@@ -12,19 +12,13 @@ const StudentNavbar = () =>{
               <h3>Home</h3>
             </Link>
           </button>
-          {/* <button>
-            <h3>About Us</h3>
-          </button> */}
           <button>
             <Link className = "student-link" to= "files">
               <h3>Files</h3>
             </Link>
           </button>
-          {/* <button>
-            <h3>Gallery  </h3>
-          </button> */}
           <button>
-            <Link className = "student-link" to = "login">
+            <Link className = "student-link" onClick = {props.handleLogout}>
               <h3>Log Out</h3>
             </Link>
           </button>

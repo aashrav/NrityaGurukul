@@ -1,0 +1,19 @@
+const STATUS_CODES = {
+  OK: 200,
+  BAD_REQUEST: 400,
+  UNAUTHORIZED: 401,
+  FORBIDDEN: 403,
+  NOT_FOUND: 404,
+  CONFLICT: 409
+};
+
+const ACCESS_LEVEL = {
+  USER: 0,
+  STUDENT: 1,
+  ADMIN: 2,
+};
+
+module.exports = {
+  STATUS_CODES,
+  ACCESS_LEVEL
+};

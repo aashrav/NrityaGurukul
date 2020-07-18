@@ -10,14 +10,31 @@ export const getUser = (user) => {
 }
 
 export const login = (user) =>{
-  return api
+  const response = api
     .get('users/login',{params:user})
     .then(res =>{
       return res
     })
+    .catch(err => {
+      return err;
+    });
+    return response
 }
-
-
+export const checkIfUserIsSignedIn = async() => {
+  const token = window.localStorage ? window.localStorage.getItem('jwtToken'):'';
+  if(!token){
+    return token;
+  }
+  const response = await api
+    .post('/users/verify', { token })
+    .then(res => {
+      return res;
+    })
+    .catch(err => {
+      return err;
+    });
+  return response;
+}
 
 // export const getUser = (user) =>{
 //   return axios({
