@@ -1,0 +1,17 @@
+@import url(//db.onlinewebfonts.com/c/2246d642275618faa05b6c551ed5685f?family=CutoffW01-Regular);
+
+.subheaderText{
+  font-family: 'CutoffW01-Regular';
+  font-weight: normal;
+  font-size: 30px;
+  color: #EB5757;
+  margin-bottom: auto;
+}
+
+.subheaderLine{
+  background-color:#F2994A;
+  outline: transparent;
+  border: transparent;
+  height: 5px;
+  float: left;
+}
