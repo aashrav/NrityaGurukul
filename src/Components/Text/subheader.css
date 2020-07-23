@@ -15,3 +15,7 @@
   height: 5px;
   float: left;
 }
+
+.subheader{
+  display: inline-block
+}

@@ -13,7 +13,7 @@ const SubHeader = (props) => {
   {console.log(props)}
 
   return(
-    <div className = {props.className}> 
+    <div className = {`subheader ${props.className}`}> 
       <h3 className = 'subheaderText'>{props.children}</h3>
       <hr className = 'subheaderLine' style = {{width: getTextWidth(props.children.split(' ')[0], "30px CutoffW01-Regular")}}/>
     </div>

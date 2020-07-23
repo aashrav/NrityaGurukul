@@ -12,12 +12,12 @@ const Header = (props) => {
     return metrics.width;
   }
   return(
-    <React.Fragment>
+    <div className = {`header ${props.children}`}>
       {/* <h1>woeifjweoij</h1> */}
     <h3 className = 'headerText'>{props.children}</h3>
     {/* {console.log()} */}
     <hr className = 'headerLine' style = {{width: getTextWidth(props.children.split(' ')[0], "45px CutoffW01-Regular")}}/>
-    </React.Fragment>
+    </div>
   )
 }
 export default Header;

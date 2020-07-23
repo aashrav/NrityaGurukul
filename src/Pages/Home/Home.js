@@ -18,9 +18,7 @@ class Home extends Component{
       </div>
 
       <div className = 'meet-teacher'>
-        <div className = 'meet-teacher-title-container'>
-          <SubHeader className = 'meet-teacher-title'>MEET THE TEACHER</SubHeader>
-        </div>
+        <SubHeader className = 'meet-teacher-title'>MEET THE TEACHER</SubHeader>
         <div className ='meet-teacher-body'>
           <div>
           <p>Nritya Gurukul brings forth the rich culture and heritage of India through dance. The dance forms taught are Bharatanatyam in Thanjavur style and semi classical dances of India.</p> 

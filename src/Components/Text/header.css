@@ -15,3 +15,7 @@
   height: 5px;
   float: left;
 }
+
+.header{
+  display: inline-block;
+}
