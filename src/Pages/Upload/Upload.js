@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Upload.css';
 import {uploadToS3,getObjectFromS3} from '../../ApiFunctions/S3Bucket';
 import Header from '../../Components/Text/Header';
+import PDFViewer from 'pdf-viewer-reactjs';
+
 class Upload extends Component{
   constructor(props){
     super(props);
@@ -62,10 +64,21 @@ class Upload extends Component{
           </div>
           <input className = 'upload-file' type = "file" onChange = {this.fileHandler} ref = {(ref) => {this.uploadInput = ref;}}/>
           <div className = "upload-submit-wrapper">
-            <button className = 'upload-submit' onClick = {this.temp}>Send</button>
+            <button className = 'upload-submit' onClick = {this.handleSubmit}>Send</button>
           </div>
           </div>
-          {(this.state.temp) ?<img src= {"data:image/jpeg;base64," + this.encode(this.state.temp)}></img> : null }
+          <button
+              href= {"data:image/jpeg;base64," + this.encode(this.state.temp)}
+              color="transparent"
+              target="_blank"
+              download>Download
+          </button>
+          {(this.state.temp) ?<PDFViewer
+            document={{
+                base64: this.encode(this.state.temp),
+            }}
+        /> : null }
+          
       </div>
     )
   }

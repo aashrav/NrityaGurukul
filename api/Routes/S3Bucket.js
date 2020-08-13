@@ -38,11 +38,11 @@ app.post('/getS3URL', (req,res)=>{
 app.post('/getS3Object', async(req,res) => {
   AWS.config.setPromisesDependency();
 
-  const objects = await s3.getObject({
+  const object = await s3.getObject({
     Bucket: S3_BUCKET,
-    Key: 'Group1/konstantina-kavvadia-kakashibg.jpg'
+    Key: 'Group1/cs47_proj_report.pdf'
   }).promise();
-  res.send(objects)
+  res.send(object)
 })
 
 module.exports = app
