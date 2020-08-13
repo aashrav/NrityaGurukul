@@ -8,23 +8,22 @@ const UserNavBar = (props) => {
       <div className = "usernb-links">
         <button>
           <Link className = "user-link" to = "/">
-            <h3>Home</h3>
+            <h3>HOME</h3>
           </Link>
         </button>
-        {/* <button>
-          <h3>About Us</h3>
-        </button> */}
+        <button>
+          <Link className = "user-link" to = "/">
+            <h3>GALLERY</h3>
+          </Link>
+        </button>
         <button>
           <Link className="user-link" to= "contact">
-            <h3>Contact</h3>
+            <h3>CONTACT</h3>
           </Link>
         </button>
-        {/* <button>
-          <h3>Gallery  </h3>
-        </button> */}
         <button>
           <Link className="user-link" to = "login">
-            <h3>Log In</h3>
+            <h3>LOG IN</h3>
           </Link>
         </button>
       </div>

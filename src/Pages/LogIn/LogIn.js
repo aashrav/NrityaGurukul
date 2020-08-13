@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './LogIn.css';
 import {login} from '../../ApiFunctions/User';
+import Header from '../../Components/Text/Header';
 class LogIn extends Component{
   state = {
     email: "",
@@ -44,13 +45,13 @@ class LogIn extends Component{
 
   render(){
     return(
-      <div>
+      <div className = 'log-in'>
+        <Header className = 'log-in-title'>LOG IN</Header>
         <div className = "log-in-container"> 
-          <h1 className= "log-in-text">Log In</h1>
-          <img className = "usernb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
+          <img className = "log-in-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
           <input className = "log-in-username" onChange = {this.emailHandler}  type= "email" placeholder= "Email"></input>
           <input className = "log-in-password" onChange = {this.passwordHandler} type = "password" placeholder= "Password"></input>
-          {(this.state.invalid) ? <h4>Invalid Email/Password*</h4>: ""}
+          {(this.state.invalid) ? <h5 className = 'log-in-invalid'>Invalid Email or Password*</h5>: ""}
           <button className = "log-in-button" onClick = {this.submitHandler}>Submit</button>
         </div>
       </div>    

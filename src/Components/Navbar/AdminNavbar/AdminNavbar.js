@@ -9,17 +9,27 @@ const AdminNavbar = (props) =>{
         <div className = "adminnb-links">
           <button>
             <Link className = "admin-link" to = "/">
-              <h3>Home</h3> 
+              <h3>HOME</h3> 
             </Link>
           </button>
           <button>
+          <Link className = "admin-link" to = "/">
+            <h3>GALLERY</h3>
+          </Link>
+        </button>
+        <button>
+          <Link className="admin-link" to= "contact">
+            <h3>CONTACT</h3>
+          </Link>
+        </button>
+          <button>
             <Link className = "admin-link" to= "upload">
-              <h3>Upload</h3>
+              <h3>UPLOAD</h3>
             </Link>
           </button>
           <button>
             <Link className = "admin-link" onClick = {props.handleLogout}>
-              <h3>Log Out</h3>
+              <h3>LOG OUT</h3>
             </Link>
           </button>
         </div>

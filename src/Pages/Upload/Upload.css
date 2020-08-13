@@ -3,22 +3,29 @@
   margin: 20px;
 }
 
-.upload-file{
-  /* margin: 20px; */
+.upload-file  {
   width: 100%;
+  font-style: normal;
+  font-size: large;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .upload-form{
   position: relative;
   align-self: center;;
-  /* width: fit-content; */
-  background-color: #0d98ba;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 7px;
-  width: 25%;
+  background-color: #2D9CDB;
+  padding: 4%;
+  margin: 2%;
+  border-radius: 10px;
+  width: 35%;
   text-align: left;
   color: #f3f3f3;
+  font-style: normal;
+  font-size: medium;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
 .upload-submit-wrapper{
   text-align: center;
@@ -31,9 +38,16 @@
   background-color: rgb(230, 118, 118);
   width: 25%;
   display: inline-block;
-  height: 50px;
+  padding: 3%;
+  margin-top: 4%;
   font-size: larger;
-  color:white
+  color:white;
+  border: transparent
+}
+.upload-submit:hover{
+  cursor: pointer;
+  background-color: #828282;
+
 }
 .upload-form h1{
   text-align: center;
@@ -41,6 +55,7 @@
 
 .upload-wrapper{
   text-align: -webkit-center;
+  margin-top: 2%;
 }
 
 /* .upload-fileName{
@@ -50,20 +65,17 @@
 
 .upload-fileName p{
   padding: 5px; 
-  /* width: fit-content;  */
   display: inline;
-  width: min-content;
   font-size: larger;
 }
 
 .upload-fileName{
-  margin: 20px;
+  margin: 5%;
   margin-left: 0px;
 }
 
 .upload-file{
   font-size: medium;
-  margin: 10px;
   margin-left: 0px;
   outline: transparent;
   width: fit-content;
@@ -72,9 +84,10 @@
 .upload-form .upload-fileName input{
   border-radius: 5px;
   outline: transparent;
-  height: 30px;
-  width: 50%;
+  padding: 2%;
+  width: 60%;
   font-size: medium;
+  border:transparent
 }
 
 .upload-file, .upload-submit :hover{

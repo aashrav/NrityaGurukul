@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Upload.css';
 import {handleUpload} from '../../ApiFunctions/S3Bucket';
+import Header from '../../Components/Text/Header';
 class Upload extends Component{
   constructor(props){
     super(props);
@@ -37,10 +38,8 @@ class Upload extends Component{
   render(){
     return(
       <div className = 'upload-wrapper'>
-
-        {/* <form className = 'upload-form'> */}
+        <Header className = 'upload-title'>UPLOAD FILES</Header>
         <div className = 'upload-form'>
-          <h1 className = 'upload-title'>Upload File</h1>
           <div className = 'upload-fileName'>
             <p>File Name: </p>
             <input type = "text" onChange = {this.nameHandler}/>
@@ -50,10 +49,6 @@ class Upload extends Component{
             <button className = 'upload-submit' onClick = {this.handleSubmit}>Send</button>
           </div>
           </div>
-        {/* </form> */}
-        {/* <button onClick={this.chooseFiles}>Choose files</button> */}
-        {/* <input className = 'upload-file' type = "file" onChange = {this.handleChange} ref = {(ref) => {this.uploadInput = ref;}}/>
-        <button onClick = {this.handleSubmit}>Upload</button> */}
       </div>
     )
   }
