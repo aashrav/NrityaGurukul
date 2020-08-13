@@ -6,6 +6,7 @@ import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
 import Files from './Pages/Files/Files';
 import Upload from './Pages/Upload/Upload';
+import Contact from './Pages/Contact/Contact';
 
 const Routing = ({appProps}) => {
 
@@ -26,6 +27,10 @@ const Routing = ({appProps}) => {
     {
       Component:Upload,
       path: '/upload'
+    },
+    {
+      Component: Contact,
+      path: '/contact'
     }
   ]
   return(

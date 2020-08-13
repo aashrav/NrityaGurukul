@@ -1,10 +1,12 @@
 .admin-navbar{
-  background-color: rgb(182, 22, 22);
+  background-color: #eb5757;
   min-height: max-content;
+  display: flex;
+
 }
 
 .adminnb-logo{
-  height: 60px;
+  height: 80px;
 }
 
 .admin-link{
@@ -14,6 +16,8 @@
 
 .adminnb-links{
   float: right;
+  align-self: center;
+  margin-left: auto;
 }
 
 .admin-navbar button{
@@ -25,13 +29,15 @@
 
 .admin-navbar button h3{
   display:inline;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: large;
-  /* font-family:monospace */
+  font-family: 'CutoffW01-Regular';
+  font-size: 22px;
+  color: white  
 }
 
 .admin-navbar button :hover{
   cursor: pointer;
-  color: white;
+  color: black;
   /* und */
 }

@@ -1,19 +1,25 @@
+@import url(//db.onlinewebfonts.com/c/2246d642275618faa05b6c551ed5685f?family=CutoffW01-Regular);
+
 .student-navbar{
   background-color: rgb(56, 55, 55);
   min-height: max-content;
+  display: flex;
 }
 
 .studentnb-logo{
-  height: 60px;
+  height: 80px;
 }
 
 .student-link{
+  
   text-decoration: none;
-  color: #f3f3f3
 }
 
 .studentnb-links{
   float: right;
+  align-self: center;
+  margin-left: auto;
+
 }
 
 .student-navbar button{
@@ -25,13 +31,14 @@
 
 .student-navbar button h3{
   display:inline;
-  font-weight: lighter;
+  font-weight: normal;
   font-size: large;
-  /* font-family:monospace */
+  font-family: 'CutoffW01-Regular';
+  font-size: 22px;
+  color: white
 }
 
 .student-navbar button :hover{
   cursor: pointer;
   color: #0d98ba;
-  /* und */
 }

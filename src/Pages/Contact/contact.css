@@ -1,0 +1,38 @@
+@import url(//db.onlinewebfonts.com/c/2246d642275618faa05b6c551ed5685f?family=CutoffW01-Regular);
+
+.contact-us{
+  margin-top: 3%;
+  margin-left: 3%;
+  
+}
+.email-logo{
+  background: #f3f3f3;
+
+}
+.email-logo, .phone-logo, .facebook-logo{
+  margin: 2%
+}
+
+.email-container, .phone-container, .facebook-container{
+  display: flex;
+  align-items: center;
+}
+
+.email-text, .phone-text, .facebook-text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.email-text{
+  color: #2D9CDB
+
+}
+.phone-text{
+  color: #F2994A;
+}
+
+.facebook-text{
+  color: #2F80ED
+}
+
