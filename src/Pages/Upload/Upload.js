@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Upload.css';
-import {handleUpload} from '../../ApiFunctions/S3Bucket';
+import {uploadToS3,getObjectFromS3} from '../../ApiFunctions/S3Bucket';
 import Header from '../../Components/Text/Header';
 class Upload extends Component{
   constructor(props){
@@ -9,7 +9,8 @@ class Upload extends Component{
       success : false,
       url: "",
       selectedFile: null,
-      fileName: ""
+      fileName: "",
+      temp: null,
     }
   }
 
@@ -32,10 +33,25 @@ class Upload extends Component{
     // console.log(data);
     console.log("handleSubmit file: ",this.state.selectedFile);
     console.log("handleSubmit fileName: ",this.state.fileName);
-    handleUpload({file: this.state.selectedFile, fileName: this.state.fileName})
+    uploadToS3({file: this.state.selectedFile, fileName: this.state.fileName})
+  }
+
+  temp = async(e) => {
+    const response = await getObjectFromS3();
+    console.log("nnnnnn", response.data.Body)
+    this.setState({
+      temp: response.data.Body
+    })
+  }
+
+  encode(data){
+    let buf = Buffer.from(data);
+    let base64 = buf.toString('base64');
+    return base64;
   }
 
   render(){
+    console.log(this.state.temp)
     return(
       <div className = 'upload-wrapper'>
         <Header className = 'upload-title'>UPLOAD FILES</Header>
@@ -46,9 +62,10 @@ class Upload extends Component{
           </div>
           <input className = 'upload-file' type = "file" onChange = {this.fileHandler} ref = {(ref) => {this.uploadInput = ref;}}/>
           <div className = "upload-submit-wrapper">
-            <button className = 'upload-submit' onClick = {this.handleSubmit}>Send</button>
+            <button className = 'upload-submit' onClick = {this.temp}>Send</button>
           </div>
           </div>
+          {(this.state.temp) ?<img src= {"data:image/jpeg;base64," + this.encode(this.state.temp)}></img> : null }
       </div>
     )
   }

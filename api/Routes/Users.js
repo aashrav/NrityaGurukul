@@ -112,34 +112,4 @@ users.post('/createUser', (req, res) =>{
     })
 })
 
-users.post('/getS3URL', (req,res)=>{
-  const s3 = new AWS.S3({
-    accessKeyId:process.env.AWS_ID,
-    secretAccessKey: process.env.AWS_SECRET,
-    region:'eu-west-1',
-    signatureVersion: 'v4'
-  });
-  const fileName = req.body.fileName;
-  // const fileType = ".mp4";
-
-  const s3Params = {
-    Bucket: S3_BUCKET,
-    Key: fileName ,
-    Expires: 500,
-    ContentType: "multipart/form-data",
-    ACL: 'public-read',
-
-  };
-  s3.getSignedUrl('putObject', s3Params, (err, data) => {
-    if(err){
-      console.log(err);
-      res.json({success: false, error: err})
-    }
-    res.json({success:true, data:{data}});
-
-  });
-
-})
-
 module.exports = users
-
