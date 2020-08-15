@@ -47,7 +47,7 @@ app.post('/getS3File', async(req,res) => {
 
 app.post('/getListOfFiles', async(req,res) => {
   AWS.config.setPromisesDependency();
-  const object = await s3.listObjectsV2({
+  const object =  await s3.listObjectsV2({
     Bucket: S3_BUCKET,
     Prefix: req.body.prefix
   }).promise();
@@ -55,18 +55,3 @@ app.post('/getListOfFiles', async(req,res) => {
 })
 
 module.exports = app
-
-//   s3.getSignedUrl('putObject', s3Params, (err, data) => {
-//     if(err){
-//       console.log(err);
-//       res.json({success: false, error: err})
-//     }
-//     const returnData = {
-//       signedRequest: data,
-//       url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
-//     };
-//     // Send it all back
-//     res.json({success:true, data:{returnData}});
-//   });
-// }
-

@@ -7,7 +7,7 @@ import {checkIfUserIsSignedIn} from './ApiFunctions/User';
 function App(props) {
   const [authenticated, setAuthenticated] = useState(0)
   const [isAuthenticating, setIsAuthenticating] = useState(true);
-  // const [user, setUser] = useState();
+  const [user, setUser] = useState();
 
   async function getAuthStatus() {
     setIsAuthenticating(true);
@@ -15,18 +15,18 @@ function App(props) {
     if(authStatus && authStatus.data){
       setAuthenticated(authStatus.data.accessLevel);
     }
+    if(authStatus) setUser({ token: authStatus.config.data, ...authStatus.data });
     setIsAuthenticating(false);
   }
 
   useEffect(() => {
     getAuthStatus();
-    // eslint-disable-next-line
   }, [])
 
   return (
     !isAuthenticating && (
       <div>
-        <Routing appProps = {{authenticated, setAuthenticated}}/>
+        <Routing appProps = {{authenticated, setAuthenticated, user}}/>
       </div>
     ))
   ;

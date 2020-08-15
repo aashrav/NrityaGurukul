@@ -39,7 +39,6 @@ export const getFileFromS3 = async(key) => {
 }
 
 export const getListOfFiles = async(prefix) => {
-  console.log('bruh', prefix)
   return api.post("S3/getListOfFiles", {prefix})
     .then((res) =>{    
       return res;

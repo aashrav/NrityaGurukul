@@ -28,7 +28,7 @@ const StudentNavbar = (props) =>{
           </Link>
         </button>
         <button>
-          <Link className="student-link" onClick = {props.handleLogout}>
+          <Link className="student-link" to = '/' onClick = {props.handleLogout}>
             <h3>LOG OUT</h3>
           </Link>
         </button>
