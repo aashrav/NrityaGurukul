@@ -19,7 +19,7 @@ app.post('/getS3URL', (req,res)=>{
 
   const s3Params = {
     Bucket: S3_BUCKET,
-    Key: fileName ,
+    Key: `Group${req.body.group}/` + fileName ,
     Expires: 500,
     ContentType: "multipart/form-data",
     ACL: 'public-read',
@@ -35,12 +35,21 @@ app.post('/getS3URL', (req,res)=>{
   });
 })
 
-app.post('/getS3Object', async(req,res) => {
+app.post('/getS3File', async(req,res) => {
   AWS.config.setPromisesDependency();
 
   const object = await s3.getObject({
     Bucket: S3_BUCKET,
-    Key: 'Group1/cs47_proj_report.pdf'
+    Key: req.body.key
+  }).promise();
+  res.send(object)
+})
+
+app.post('/getListOfFiles', async(req,res) => {
+  AWS.config.setPromisesDependency();
+  const object = await s3.listObjectsV2({
+    Bucket: S3_BUCKET,
+    Prefix: req.body.prefix
   }).promise();
   res.send(object)
 })
