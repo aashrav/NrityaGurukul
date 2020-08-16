@@ -3,7 +3,7 @@ const api = axios.create({baseURL: 'http://localhost:5000'})
 
 export const getUser = (user) => {
     return api
-       .get('users/getUser', {params:user})
+       .get('user/getUser', {params:user})
        .then( (res) =>{
         return res;
       })
@@ -11,7 +11,7 @@ export const getUser = (user) => {
 
 export const login = (user) =>{
   const response = api
-    .get('users/login',{params:user})
+    .get('user/login',{params:user})
     .then(res =>{
       return res
     })
@@ -26,7 +26,7 @@ export const checkIfUserIsSignedIn = async() => {
     return token;
   }
   const response = await api
-    .post('/users/verify', { token })
+    .post('/user/verify', { token })
     .then(res => {
       return res;
     })

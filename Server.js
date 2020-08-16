@@ -22,9 +22,11 @@ mongoose
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err))
 
-var Users = require('./api/Routes/Users');
+var User = require('./api/Routes/Users');
+var S3 = require('./api/Routes/S3Bucket');
 
-app.use('/users', Users);
+app.use('/user', User);
+app.use('/s3', S3)
 
 app.listen(port,function(){
   console.log('Server is running on port: ' + port);

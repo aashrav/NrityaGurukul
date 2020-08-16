@@ -28,7 +28,7 @@ const AdminNavbar = (props) =>{
             </Link>
           </button>
           <button>
-            <Link className = "admin-link" onClick = {props.handleLogout}>
+            <Link className = "admin-link" to = '/' onClick = {props.handleLogout}>
               <h3>LOG OUT</h3>
             </Link>
           </button>
