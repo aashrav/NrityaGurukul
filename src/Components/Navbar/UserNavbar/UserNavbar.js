@@ -12,7 +12,7 @@ const UserNavBar = (props) => {
           </Link>
         </button>
         <button>
-          <Link className = "user-link" to = "/">
+          <Link className = "user-link" to = "/gallery">
             <h3>GALLERY</h3>
           </Link>
         </button>

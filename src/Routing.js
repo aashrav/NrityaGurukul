@@ -8,6 +8,7 @@ import Files from './Pages/Files/Files';
 import Upload from './Pages/Upload/Upload';
 import Contact from './Pages/Contact/Contact';
 import PrivateRoute from './Components/Routing/PrivateRoute';   
+import Gallery from '../src/Pages/Gallery/Gallery';
 import {ACCESS_LEVEL} from './Enums';
 
 const Routing = ({appProps}) => {
@@ -54,6 +55,10 @@ const Routing = ({appProps}) => {
     {
       Component: Contact,
       path: '/contact'
+    },
+    {
+      Component: Gallery,
+      path: '/gallery'
     }
   ]
   return(

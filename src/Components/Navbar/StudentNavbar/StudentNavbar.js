@@ -13,7 +13,7 @@ const StudentNavbar = (props) =>{
           </Link>
         </button>
         <button>
-          <Link className = "student-link" to = "/">
+          <Link className = "student-link" to = "/gallery">
             <h3>GALLERY</h3>
           </Link>
         </button>
