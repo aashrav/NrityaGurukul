@@ -7,8 +7,17 @@
 }
 .email-logo{
   background: #f3f3f3;
-
+  width: 8%
 }
+
+.phone-logo{
+  width: 8%;
+}
+
+.facebook-logo{
+  width: 8%;
+}
+
 .email-logo, .phone-logo, .facebook-logo{
   margin: 2%
 }
