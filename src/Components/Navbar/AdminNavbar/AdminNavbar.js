@@ -30,7 +30,7 @@ const AdminNavbar = (props) =>{
             </Link>
           </button>
           <button>
-          <Link className = "admin-link" to = "/">
+          <Link className = "admin-link" to = "/gallery">
             <h3>GALLERY</h3>
           </Link>
           </button>
