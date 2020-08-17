@@ -4,7 +4,7 @@ import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 
 import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
-import Files from './Pages/Files/Files';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Upload from './Pages/Upload/Upload';
 import Contact from './Pages/Contact/Contact';
 import PrivateRoute from './Components/Routing/PrivateRoute';   
@@ -21,8 +21,8 @@ const Routing = ({appProps}) => {
       redirect: '/login',
     },
       {
-      Component: Files,
-      path: '/files',
+      Component: Dashboard,
+      path: '/dashboard',
       allowedIf: userIsStudent,
       redirect: '/login'
     },

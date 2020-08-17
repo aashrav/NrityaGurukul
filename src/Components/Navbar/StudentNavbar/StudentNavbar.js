@@ -23,8 +23,8 @@ const StudentNavbar = (props) =>{
           </Link>
         </button>
         <button>
-          <Link className="student-link" to = 'files'>
-            <h3>FILES</h3>
+          <Link className="student-link" to = 'dashboard'>
+            <h3>DASHBOARD</h3>
           </Link>
         </button>
         <button>
