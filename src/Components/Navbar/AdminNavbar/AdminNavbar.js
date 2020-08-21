@@ -28,6 +28,11 @@ const AdminNavbar = (props) =>{
             </Link>
           </button>
           <button>
+            <Link className = "admin-link" to= "overview">
+              <h3>OVERVIEW</h3>
+            </Link>
+          </button>
+          <button>
             <Link className = "admin-link" to = '/' onClick = {props.handleLogout}>
               <h3>LOG OUT</h3>
             </Link>

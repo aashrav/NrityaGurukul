@@ -8,12 +8,19 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Upload from './Pages/Upload/Upload';
 import Contact from './Pages/Contact/Contact';
 import PrivateRoute from './Components/Routing/PrivateRoute';   
+import Overview from '../src/Pages/Overview/Overview';
 import {ACCESS_LEVEL} from './Enums';
 
 const Routing = ({appProps}) => {
   const userIsAdmin = appProps.user && appProps.user.accessLevel == ACCESS_LEVEL.ADMIN;
   const userIsStudent = appProps.user && appProps.user.accessLevel === ACCESS_LEVEL.STUDENT;
   const signedInRoutes = [
+    {
+      Component:Overview,
+      path: '/overview',
+      allowedIf: userIsAdmin ,
+      redirect: '/login',
+    },
     {
       Component:Upload,
       path: '/upload',
