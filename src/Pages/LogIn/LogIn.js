@@ -21,7 +21,8 @@ class LogIn extends Component{
     });
   }
 
-  submitHandler = () =>{
+  submitHandler = (e) =>{
+    e.preventDefault()
     login({email: this.state.email, password: this.state.password})
       .then((res)=>{
         if(res.data && res.data.isAuthenticated === true){
@@ -35,6 +36,7 @@ class LogIn extends Component{
       }).catch((err) => {
         this.invalidAuth(true);
       })
+    return false
   }
 
   invalidAuth = (val) =>{
@@ -49,10 +51,12 @@ class LogIn extends Component{
         <Header className = 'log-in-title'>LOG IN</Header>
         <div className = "log-in-container"> 
           <img className = "log-in-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
-          <input className = "log-in-username" onChange = {this.emailHandler}  type= "email" placeholder= "Email"></input>
-          <input className = "log-in-password" onChange = {this.passwordHandler} type = "password" placeholder= "Password"></input>
-          {(this.state.invalid) ? <h5 className = 'log-in-invalid'>Invalid Email or Password*</h5>: ""}
-          <button className = "log-in-button" onClick = {this.submitHandler}>Submit</button>
+          <form onSubmit = {this.submitHandler}>
+            <input required className = "log-in-username" onChange = {this.emailHandler}  type= "email" placeholder= "Email"></input>
+            <input required className = "log-in-password" onChange = {this.passwordHandler} type = "password" placeholder= "Password"></input>
+            {(this.state.invalid) ? <h5 className = 'log-in-invalid'>Invalid Email or Password*</h5>: ""}
+            <button className = "log-in-button" type = 'submit'>Submit</button>
+          </form>
         </div>
       </div>    
     )
