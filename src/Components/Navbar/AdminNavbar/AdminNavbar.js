@@ -5,6 +5,11 @@ import ProfileDropdown from '../../ProfileDropdown/ProfileDropdown';
 const AdminNavbar = (props) =>{
   const dropdownLinks = [
     {
+      label:'Overview',
+      to: 'overview',
+      click: null
+    },
+    {
       label:'Upload',
       to: 'upload',
       click: null
