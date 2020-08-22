@@ -2,7 +2,7 @@
   background-color: #eb5757;
   min-height: max-content;
   display: flex;
-
+  min-width: 645px;
 }
 
 .adminnb-logo{
