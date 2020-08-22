@@ -13,6 +13,7 @@
   margin: 1% auto 0 auto;
   background: linear-gradient(180deg, rgba(235, 87, 87, 0.25) 0%, rgba(242, 153, 74, 0.21224) 99.99%, rgba(0, 0, 0, 0) 100%);  border:2px solid grey;
   width: 33%; 
+  min-width: 400px;
   height: auto;
   padding: 2%;
   border-radius: 30px;
