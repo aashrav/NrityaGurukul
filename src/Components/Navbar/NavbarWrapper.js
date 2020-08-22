@@ -15,9 +15,9 @@ const NavbarWrapper = ({
   }
   const getNavBar = (accessLevel) =>{
     if(accessLevel === 2){
-      return <AdminNavbar  handleLogout={handleLogout}/>;
+      return <AdminNavbar user = {appProps.user} handleLogout={handleLogout}/>;
     }else if(accessLevel === 1){
-      return <StudentNavbar handleLogout={handleLogout}/>;
+      return <StudentNavbar user = {appProps.user} handleLogout={handleLogout}/>;
     }else{
       return <UserNavbar/>
     }

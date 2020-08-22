@@ -4,10 +4,11 @@ import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 
 import LogIn from  './Pages/LogIn/LogIn';
 import Home from './Pages/Home/Home';
-import Files from './Pages/Files/Files';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import Upload from './Pages/Upload/Upload';
 import Contact from './Pages/Contact/Contact';
 import PrivateRoute from './Components/Routing/PrivateRoute';   
+import Overview from '../src/Pages/Overview/Overview';
 import {ACCESS_LEVEL} from './Enums';
 
 const Routing = ({appProps}) => {
@@ -15,14 +16,20 @@ const Routing = ({appProps}) => {
   const userIsStudent = appProps.user && appProps.user.accessLevel === ACCESS_LEVEL.STUDENT;
   const signedInRoutes = [
     {
+      Component:Overview,
+      path: '/overview',
+      allowedIf: userIsAdmin ,
+      redirect: '/login',
+    },
+    {
       Component:Upload,
       path: '/upload',
       allowedIf: userIsAdmin ,
       redirect: '/login',
     },
       {
-      Component: Files,
-      path: '/files',
+      Component: Dashboard,
+      path: '/dashboard',
       allowedIf: userIsStudent,
       redirect: '/login'
     },

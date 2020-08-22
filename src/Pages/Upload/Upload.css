@@ -21,6 +21,7 @@
   margin: 2%;
   border-radius: 10px;
   width: 35%;
+  min-width: 420px;
   text-align: center;
   color: #f3f3f3;
   font-style: normal;

@@ -9,6 +9,15 @@ export const getUser = (user) => {
       })
 }
 
+export const getAllUsers = () => {
+  return api
+    .get('user/getAllUsers')
+    .then((res) => {
+      return res;
+    })
+
+}
+
 export const login = (user) =>{
   const response = api
     .get('user/login',{params:user})
@@ -53,17 +62,24 @@ export const checkIfUserIsSignedIn = async() => {
 //   })
 // }
 
-export const createUser = (newUser) => {
-  return axios
+export const createUser = async(newUser) => {
+  console.log("CREATE USER")
+  const token = window.localStorage ? window.localStorage.getItem('jwtToken'):'';
+  if(!token){
+    return token;
+  }
+  const response = await api
         .post('/user/createUser',{
           first_name: newUser.first_name,
           last_name: newUser.last_name,
           email: newUser.email,
           group: newUser.group,
-          password: newUser.password
+          password: newUser.password,
+          accessLevel: newUser.accessLevel
         })
         .then(res =>{
-          console.log("Created New User");
+          console.log("Created New User ", res);
         })
+  return response;
 }
 

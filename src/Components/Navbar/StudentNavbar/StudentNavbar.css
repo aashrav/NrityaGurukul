@@ -4,6 +4,7 @@
   background-color: rgb(56, 55, 55);
   min-height: max-content;
   display: flex;
+  min-width: 645px;
 }
 
 .studentnb-logo{

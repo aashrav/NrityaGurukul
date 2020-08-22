@@ -1,23 +1,34 @@
 .file-object-card{
-  background-color: #D3D3D3	;
+  background-color:#f3f3f3	;
   margin: 1%;
-  max-width: 40%;
-  min-width: min-content;
+  /* min-width: min-content; */
 
-  height: 10vh;
-  min-height: 10vh;
+  height: 8vh;
+  /* min-height: fit-content; */
   border-radius: 10px;
+  max-width: 80%;
+
+  padding: 1%;
+  /* vertical-align:  ; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;  
+
 }
 
 .file-object-title{
-  text-align: center;
-  font-size: larger;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: initial;
+  /* text-align: center; */
+  font-size: large;
   font-weight: lighter;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
 
 .file-object-card:hover{
-  background-color: #eb5757;
+  background-color: #F2994A ;
   cursor: pointer;
 }
