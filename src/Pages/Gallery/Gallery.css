@@ -8,3 +8,7 @@
   margin-right: 5%;
   margin-left:5%
 }
+
+#photo-gallery div {
+  place-content: center;
+}

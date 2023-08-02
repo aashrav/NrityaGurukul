@@ -62,7 +62,7 @@ class Home extends Component{
                 <Typography 
                   style = {{fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
                             fontWeight: "lighter",
-                            fontSize: "20px"
+                            fontSize: "25px"
                           }}
                 > 
                       Nritya Gurukul brings forth the rich culture and heritage of India through dance. The dance forms taught are Bharatanatyam in Thanjavur style and semi classical dances of India
@@ -71,7 +71,7 @@ class Home extends Component{
                 <Typography 
                   style = {{fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
                             fontWeight: "lighter",
-                            fontSize: "20px"
+                            fontSize: "25px"
                           }}
                 > 
                       Here utmost priority is given to teach in a friendly, positive environment, and to recognize the strength and potential of every individual. The importance of team work and integrity is understood and implemented by everyone
