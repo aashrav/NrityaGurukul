@@ -1,29 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Routing from './Routing';
-import {checkIfUserIsSignedIn} from './ApiFunctions/User';
-//import { createTheme } from '@mui/material';
 
 function App(props) {
-  const [authenticated, setAuthenticated] = useState(0)
-  const [isAuthenticating, setIsAuthenticating] = useState(true);
-  const [user, setUser] = useState();
-
-  async function getAuthStatus() {
-    setIsAuthenticating(true);
-    const authStatus = await checkIfUserIsSignedIn();
-    if(authStatus && authStatus.data){
-      setAuthenticated(authStatus.data.accessLevel);
-    }
-    if(authStatus) setUser({ token: authStatus.config.data, ...authStatus.data });
-    setIsAuthenticating(false);
-  }
-
-  useEffect(() => {
-    getAuthStatus();
-  }, [])
-
   // const theme = createTheme({
   //   typography: {
   //     fontFamily: [
@@ -33,12 +13,10 @@ function App(props) {
   // });
 
   return (
-    !isAuthenticating && (
-      <div className = 'app'>
-        <Routing appProps = {{authenticated, setAuthenticated, user}}/>
-      </div>
-    ))
-  ;
+    <div className = 'app'>
+      <Routing />
+    </div>
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
