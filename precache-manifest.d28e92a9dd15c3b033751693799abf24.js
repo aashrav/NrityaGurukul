@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "841cd469152886d72c6ef1ff6751093d",
+    "revision": "14819631da433e42f92ad156614ae26c",
     "url": "/NrityaGurukul/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/NrityaGurukul/static/css/2.b95cfb3e.chunk.css"
   },
   {
-    "revision": "115845f2e6c27433fe37",
+    "revision": "5f7f5244a37db98de379",
     "url": "/NrityaGurukul/static/css/main.cec8ac06.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/NrityaGurukul/static/js/2.db6dd406.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "115845f2e6c27433fe37",
-    "url": "/NrityaGurukul/static/js/main.b3775420.chunk.js"
+    "revision": "5f7f5244a37db98de379",
+    "url": "/NrityaGurukul/static/js/main.b84c7c6a.chunk.js"
   },
   {
     "revision": "1faafa02978077e393df",
