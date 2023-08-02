@@ -8,7 +8,7 @@ const UserNavBar = (props) => {
       <img className = "usernb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
       <div className = "usernb-links">
         <button>
-          <Link className = "user-link" to = "/">
+          <Link className = "user-link" to = "/NrityaGurukul">
             <h3>HOME</h3>
           </Link>
         </button>

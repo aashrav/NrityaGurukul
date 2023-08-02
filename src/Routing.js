@@ -9,7 +9,7 @@ const Routing = ({appProps}) => {
   var routes = [
     {
       Component: Home,
-      path: '/',
+      path: '/NrityaGurukul',
     },
     {
       Component: Contact,
