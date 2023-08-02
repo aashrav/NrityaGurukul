@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/NrityaGurukul/static/css/main.cec8ac06.chunk.css",
-    "main.js": "/NrityaGurukul/static/js/main.f8f23b7d.chunk.js",
-    "main.js.map": "/NrityaGurukul/static/js/main.f8f23b7d.chunk.js.map",
+    "main.css": "/NrityaGurukul/static/css/main.38e5c4cc.chunk.css",
+    "main.js": "/NrityaGurukul/static/js/main.7159e3ce.chunk.js",
+    "main.js.map": "/NrityaGurukul/static/js/main.7159e3ce.chunk.js.map",
     "runtime-main.js": "/NrityaGurukul/static/js/runtime-main.7c5060b3.js",
     "runtime-main.js.map": "/NrityaGurukul/static/js/runtime-main.7c5060b3.js.map",
     "static/css/2.0f22e85f.chunk.css": "/NrityaGurukul/static/css/2.0f22e85f.chunk.css",
     "static/js/2.5f9c0d8a.chunk.js": "/NrityaGurukul/static/js/2.5f9c0d8a.chunk.js",
     "static/js/2.5f9c0d8a.chunk.js.map": "/NrityaGurukul/static/js/2.5f9c0d8a.chunk.js.map",
     "index.html": "/NrityaGurukul/index.html",
-    "precache-manifest.9dbc6c7ef9ac02aab620c16ccadf25aa.js": "/NrityaGurukul/precache-manifest.9dbc6c7ef9ac02aab620c16ccadf25aa.js",
+    "precache-manifest.8c147558fe720f63d3ac530fd5ca5005.js": "/NrityaGurukul/precache-manifest.8c147558fe720f63d3ac530fd5ca5005.js",
     "service-worker.js": "/NrityaGurukul/service-worker.js",
     "static/css/2.0f22e85f.chunk.css.map": "/NrityaGurukul/static/css/2.0f22e85f.chunk.css.map",
-    "static/css/main.cec8ac06.chunk.css.map": "/NrityaGurukul/static/css/main.cec8ac06.chunk.css.map",
+    "static/css/main.38e5c4cc.chunk.css.map": "/NrityaGurukul/static/css/main.38e5c4cc.chunk.css.map",
     "static/js/2.5f9c0d8a.chunk.js.LICENSE.txt": "/NrityaGurukul/static/js/2.5f9c0d8a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7c5060b3.js",
     "static/css/2.0f22e85f.chunk.css",
     "static/js/2.5f9c0d8a.chunk.js",
-    "static/css/main.cec8ac06.chunk.css",
-    "static/js/main.f8f23b7d.chunk.js"
+    "static/css/main.38e5c4cc.chunk.css",
+    "static/js/main.7159e3ce.chunk.js"
   ]
 }
