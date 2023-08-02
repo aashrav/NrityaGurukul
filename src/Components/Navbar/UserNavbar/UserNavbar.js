@@ -2,6 +2,7 @@ import React from 'react';
 import './UserNavbar.css'
 import {Link} from "react-router-dom";
 const UserNavBar = (props) => {
+  
   return (
     <div className = "user-navbar">
       <img className = "usernb-logo" alt = "" src = {process.env.PUBLIC_URL + '/images/logo.png'}></img>
@@ -12,7 +13,7 @@ const UserNavBar = (props) => {
           </Link>
         </button>
         <button>
-          <Link className = "user-link" to = "/">
+          <Link className = "user-link" to = "/gallery">
             <h3>GALLERY</h3>
           </Link>
         </button>
@@ -21,11 +22,11 @@ const UserNavBar = (props) => {
             <h3>CONTACT</h3>
           </Link>
         </button>
-        <button>
+        {/* <button>
           <Link className="user-link" to = "login">
             <h3>LOG IN</h3>
           </Link>
-        </button>
+        </button> */}
       </div>
     </div>
   );

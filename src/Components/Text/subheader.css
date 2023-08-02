@@ -3,8 +3,9 @@
 .subheaderText{
   font-family: 'CutoffW01-Regular';
   font-weight: normal;
-  font-size: 30px;
-  color: #EB5757;
+  font-size: 45px;
+  /* color: #EB5757; */
+  color: #ea3b3b;
   margin-bottom: auto;
 }
 

@@ -25,7 +25,7 @@ const {
 
 users.get('/getUser', (req, res)=>{
   const filter = req.query.email ? {email: req.query.email} : {};
-  User.findOne(filter).then(user => res.status(200).send(user));
+  User.findOne(filter).then(user => res.status(OK).send(user));
 })
 
 users.get('/getAllUsers', (req, res)=>{
