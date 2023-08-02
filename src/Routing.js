@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavbarWrapper from './Components/Navbar/NavbarWrapper';
 import Home from './Pages/Home/Home';
 import Contact from './Pages/Contact/Contact';
-import Gallery from '../src/Pages/Gallery/Gallery';
+import GalleryGrid from './Pages/Gallery/GalleryGrid';
 
 const Routing = ({appProps}) => {
   var routes = [
@@ -16,7 +16,7 @@ const Routing = ({appProps}) => {
       path: '/contact'
     },
     {
-      Component: Gallery,
+      Component: GalleryGrid,
       path: '/gallery'
     }
   ]

@@ -1,5 +1,5 @@
 .gallery-container{
-  text-align: center;
+  text-align: -webkit-center;
   margin-top: 2%
 }
 
