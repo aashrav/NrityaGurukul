@@ -22,11 +22,6 @@ const UserNavBar = (props) => {
             <h3>CONTACT</h3>
           </Link>
         </button>
-        {/* <button>
-          <Link className="user-link" to = "login">
-            <h3>LOG IN</h3>
-          </Link>
-        </button> */}
       </div>
     </div>
   );
