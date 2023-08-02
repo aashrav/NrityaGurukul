@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/NrityaGurukul/static/css/main.cec8ac06.chunk.css",
-    "main.js": "/NrityaGurukul/static/js/main.b84c7c6a.chunk.js",
-    "main.js.map": "/NrityaGurukul/static/js/main.b84c7c6a.chunk.js.map",
+    "main.js": "/NrityaGurukul/static/js/main.f8f23b7d.chunk.js",
+    "main.js.map": "/NrityaGurukul/static/js/main.f8f23b7d.chunk.js.map",
     "runtime-main.js": "/NrityaGurukul/static/js/runtime-main.7c5060b3.js",
     "runtime-main.js.map": "/NrityaGurukul/static/js/runtime-main.7c5060b3.js.map",
-    "static/css/2.b95cfb3e.chunk.css": "/NrityaGurukul/static/css/2.b95cfb3e.chunk.css",
-    "static/js/2.db6dd406.chunk.js": "/NrityaGurukul/static/js/2.db6dd406.chunk.js",
-    "static/js/2.db6dd406.chunk.js.map": "/NrityaGurukul/static/js/2.db6dd406.chunk.js.map",
+    "static/css/2.0f22e85f.chunk.css": "/NrityaGurukul/static/css/2.0f22e85f.chunk.css",
+    "static/js/2.5f9c0d8a.chunk.js": "/NrityaGurukul/static/js/2.5f9c0d8a.chunk.js",
+    "static/js/2.5f9c0d8a.chunk.js.map": "/NrityaGurukul/static/js/2.5f9c0d8a.chunk.js.map",
     "index.html": "/NrityaGurukul/index.html",
-    "precache-manifest.d28e92a9dd15c3b033751693799abf24.js": "/NrityaGurukul/precache-manifest.d28e92a9dd15c3b033751693799abf24.js",
+    "precache-manifest.9dbc6c7ef9ac02aab620c16ccadf25aa.js": "/NrityaGurukul/precache-manifest.9dbc6c7ef9ac02aab620c16ccadf25aa.js",
     "service-worker.js": "/NrityaGurukul/service-worker.js",
-    "static/css/2.b95cfb3e.chunk.css.map": "/NrityaGurukul/static/css/2.b95cfb3e.chunk.css.map",
+    "static/css/2.0f22e85f.chunk.css.map": "/NrityaGurukul/static/css/2.0f22e85f.chunk.css.map",
     "static/css/main.cec8ac06.chunk.css.map": "/NrityaGurukul/static/css/main.cec8ac06.chunk.css.map",
-    "static/js/2.db6dd406.chunk.js.LICENSE.txt": "/NrityaGurukul/static/js/2.db6dd406.chunk.js.LICENSE.txt"
+    "static/js/2.5f9c0d8a.chunk.js.LICENSE.txt": "/NrityaGurukul/static/js/2.5f9c0d8a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7c5060b3.js",
-    "static/css/2.b95cfb3e.chunk.css",
-    "static/js/2.db6dd406.chunk.js",
+    "static/css/2.0f22e85f.chunk.css",
+    "static/js/2.5f9c0d8a.chunk.js",
     "static/css/main.cec8ac06.chunk.css",
-    "static/js/main.b84c7c6a.chunk.js"
+    "static/js/main.f8f23b7d.chunk.js"
   ]
 }
