@@ -4,6 +4,7 @@ import PhotoGallery from "react-photo-gallery";
 import { photos } from "./Photos";
 import {getFileFromS3, getListOfFiles} from '../../ApiFunctions/S3Bucket';
 import './Gallery.css';
+var fs = require('fs');
 class Gallery extends Component{
   
   state = {
@@ -11,6 +12,7 @@ class Gallery extends Component{
   }
 
   encode(data){
+    // console.log('bruhhhhhhh',fs);
     let buf = Buffer.from(data);
     let base64 = buf.toString('base64');
     return base64;
@@ -28,6 +30,8 @@ class Gallery extends Component{
   }
 
   async componentDidMount(){
+    // console.log('bruhhhhhhh',fs);
+
     const files = await getListOfFiles('Gallery')
     files.data.Contents.map(async(file, index) => {
       if(file.Size === 0) return;

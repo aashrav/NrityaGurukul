@@ -1,13 +1,34 @@
+// const fs = require('fs');
+var fs = require('fs');
+
+const path = require( 'path' );
+
+var dirname = process.env.PUBLIC_URL + '/images';
+console.log("Going to get file info!");
+console.log(fs);
+// fs.recurse( dirname, function(filepath, relative, filename) { 
+//   console.log(filename);
+// });
+const img = new Image();
+// img.onload = function() {
+//   alert((this.width/this.height)*100);
+// }
+img.src = process.env.PUBLIC_URL + '/images/DanceTeacher.jpg';
+
+const photo_names = [
+  'DanceTeacher.jpg',
+  
+]
 export const photos = [
   {
-    src: "https://nritya-gurukul.s3-eu-west-1.amazonaws.com/Gallery/Capture.png",
-    width: 2,
-    height: 3
+    src:  process.env.PUBLIC_URL + '/images/DanceTeacher.jpg',
+    width: 149,
+    height: 100
   },
   {
-    src: "https://nritya-gurukul.s3-eu-west-1.amazonaws.com/Gallery/DancePic.jpg",
-    width: 1,
-    height: 1
+    src: process.env.PUBLIC_URL + '/images/logo.png',
+    width: 21,
+    height: 100
   },
   {
     src: "https://source.unsplash.com/qDkso9nvCg0/600x799",

@@ -18,6 +18,6 @@ code {
     monospace;
 }
 
-.app{
-  min-width: 700px;
+@-ms-viewport{
+  width: device-width;
 }

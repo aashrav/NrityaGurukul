@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Routing from './Routing';
 import {checkIfUserIsSignedIn} from './ApiFunctions/User';
+//import { createTheme } from '@mui/material';
 
 function App(props) {
   const [authenticated, setAuthenticated] = useState(0)
@@ -22,6 +23,14 @@ function App(props) {
   useEffect(() => {
     getAuthStatus();
   }, [])
+
+  // const theme = createTheme({
+  //   typography: {
+  //     fontFamily: [
+  //       '-apple-system',
+  //     ].join(','),
+  //   },
+  // });
 
   return (
     !isAuthenticating && (
